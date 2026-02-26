@@ -1,0 +1,98 @@
+/* 1. กำหนดฟอนต์และพื้นหลัง */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* พื้นหลังเทาอ่อน สบายตา */
+    color: #333;
+}
+
+/* 2. ส่วนหัวและเมนู */
+header {
+    background-color: #4A90E2; /* สีฟ้าสะอาดตา */
+    color: white; /* เติม ; ที่หายไป */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white; /* แก้ไขคอมเมนต์ที่พิมพ์สลับกัน */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s; /* เพิ่มลูกเล่นให้ดูนุ่มนวลเวลาเอาเมาส์ไปชี้ */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f1c40f; /* เปลี่ยนสีตอนชี้ให้ดูเด่นขึ้น */
+}
+
+/* 3. ส่วนเนื้อหา */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white; /* เติม ; ที่หายไป */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 180px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 3px solid #4A90E2;
+}
+
+/* 4. ป้องกันไม่ให้เนื้อหาส่วนล่างไหลขึ้นมาปน (Clearfix) */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 5. จัดการกล่องรวมรูปภาพ (Hobby Gallery) */
+.hobby-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hobby-item {
+    width: 200px;
+    text-align: center;
+}
+
+.hobby-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s; /* เพิ่ม Animation เวลาเอาเมาส์วาง */
+}
+
+.hobby-item img:hover {
+    transform: scale(1.05); /* รูปขยายใหญ่นิดนึงตอนชี้ */
+}
+
+/* 6. ส่วนท้าย */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: white; /* เปลี่ยนสีตัวอักษรให้ตัดกับพื้นหลัง */
+    background-color: #2c3e50; /* ปรับสีให้เข้ากับโทนน้ำเงิน */
+    margin-top: 30px;
+}
